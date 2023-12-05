@@ -6,6 +6,7 @@ import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mydemoOne.bean.Cat;
+import com.example.mydemoOne.bean.DaggerMainComponent;
 
 import javax.inject.Inject;
 
@@ -20,9 +21,9 @@ public class MainActivity  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        DaggerMainComponent.builder()
-//                .build()
-//                .inject(this);
+        DaggerMainComponent.builder()
+                .build()
+                .inject(this);
 
         Log.e("cat", cat.toString());
     }
